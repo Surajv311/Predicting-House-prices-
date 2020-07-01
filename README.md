@@ -1,6 +1,11 @@
-# Predicting-House-prices-
-coursera<br>
-->update the readme file , add images of the output <br>
-->upload html file <br>
-->update the additional detail of the repository info<br>
-->Lastly make the repo public 
+# Predicting House Prices 
+### The following project uses tensorflow , keras libraries. <br>
+Before cloning and running the project ensure that you have the necessary libraries installed in your environment.
+You may install:<br>
+```conda install keras```<br>
+```conda install tensorflow```<br>
+```conda install numpy ```<br>
+```conda install matplotlib```<br>
+```conda install scikit-learn```<br>
+<br>
+![img2](https://github.com/Surajv311/Predicting-House-prices-/blob/master/images/1.jpg)
