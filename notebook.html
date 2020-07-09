@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>TensorFlow Beginner - Predicting House Prices with Regression</title>
+<title>notebook</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13074,25 +13074,6 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-1:-Introduction">Task 1: Introduction<a class="anchor-link" href="#Task-1:-Introduction">&#182;</a></h1><hr>
-<p>For this project, we are going to work on evaluating price of houses given the following features:</p>
-<ol>
-<li>Year of sale of the house</li>
-<li>The age of the house at the time of sale</li>
-<li>Distance from city center</li>
-<li>Number of stores in the locality</li>
-<li>The latitude</li>
-<li>The longitude</li>
-</ol>
-<p><img src="images/regression.png" alt="Regression"></p>
-<p>Note: This notebook uses <code>python 3</code> and these packages: <code>tensorflow</code>, <code>pandas</code>, <code>matplotlib</code>, <code>scikit-learn</code>.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
@@ -13127,8 +13108,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.1:-Importing-Libraries-&amp;-Helper-Functions">1.1: Importing Libraries &amp; Helper Functions<a class="anchor-link" href="#1.1:-Importing-Libraries-&amp;-Helper-Functions">&#182;</a></h2><p>First of all, we will need to import some libraries and helper functions. This includes TensorFlow and some utility functions that I've written to save time.</p>
-
+<h3 id="importing-libraries">importing libraries<a class="anchor-link" href="#importing-libraries">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13179,15 +13159,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-2:-Importing-the-Data">Task 2: Importing the Data<a class="anchor-link" href="#Task-2:-Importing-the-Data">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.1:-Importing-the-Data">2.1: Importing the Data<a class="anchor-link" href="#2.1:-Importing-the-Data">&#182;</a></h2><p>The dataset is saved in a <code>data.csv</code> file. We will use <code>pandas</code> to take a look at some of the rows.</p>
-
+<h3 id="importing-data">importing data<a class="anchor-link" href="#importing-data">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13314,8 +13286,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.2:-Check-Missing-Data">2.2: Check Missing Data<a class="anchor-link" href="#2.2:-Check-Missing-Data">&#182;</a></h2><p>It's a good practice to check if the data has any missing values. In real world data, this is quite common and must be taken care of before any data pre-processing or model training.</p>
-
+<h3 id="checking-missing-data">checking missing data<a class="anchor-link" href="#checking-missing-data">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13363,14 +13334,7 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-3:-Data-Normalization">Task 3: Data Normalization<a class="anchor-link" href="#Task-3:-Data-Normalization">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.1:-Data-Normalization">3.1: Data Normalization<a class="anchor-link" href="#3.1:-Data-Normalization">&#182;</a></h2><p>We can make it easier for optimization algorithms to find minimas by normalizing the data before training a model.</p>
+<h3 id="normalising-data">normalising data<a class="anchor-link" href="#normalising-data">&#182;</a></h3><p>We can make it easier for optimization algorithms to find minimas by normalizing the data before training a model.</p>
 
 </div>
 </div>
@@ -13492,7 +13456,7 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.2:-Convert-Label-Value">3.2: Convert Label Value<a class="anchor-link" href="#3.2:-Convert-Label-Value">&#182;</a></h2><p>Because we are using normalized values for the labels, we will get the predictions back from a trained model in the same distribution. So, we need to convert the predicted values back to the original distribution if we want predicted prices.</p>
+<h3 id="Converting-Label-Value">Converting Label Value<a class="anchor-link" href="#Converting-Label-Value">&#182;</a></h3><p>Because we are using normalized values for the labels, we will get the predictions back from a trained model in the same distribution. So, we need to convert the predicted values back to the original distribution if we want predicted prices.</p>
 
 </div>
 </div>
@@ -13539,15 +13503,7 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-4:-Create-Training-and-Test-Sets">Task 4: Create Training and Test Sets<a class="anchor-link" href="#Task-4:-Create-Training-and-Test-Sets">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.1:-Select-Features">4.1: Select Features<a class="anchor-link" href="#4.1:-Select-Features">&#182;</a></h2><p>Make sure to remove the column <strong>price</strong> from the list of features as it is the label and should not be used as a feature.</p>
-
+<h3 id="creating-training-&amp;-test-sets">creating training &amp; test sets<a class="anchor-link" href="#creating-training-&amp;-test-sets">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13661,7 +13617,7 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.2:-Select-Labels">4.2: Select Labels<a class="anchor-link" href="#4.2:-Select-Labels">&#182;</a></h2>
+<h3 id="Selecting-Labels">Selecting Labels<a class="anchor-link" href="#Selecting-Labels">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13707,8 +13663,7 @@ Name: price, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.3:-Feature-and-Label-Values">4.3: Feature and Label Values<a class="anchor-link" href="#4.3:-Feature-and-Label-Values">&#182;</a></h2><p>We will need to extract just the numeric values for the features and labels as the TensorFlow model will expect just numeric values as input.</p>
-
+<h5 id="We-will-need-to-extract-just-the-numeric-values-for-the-features-and-labels-as-the-TensorFlow-model-will-expect-just-numeric-values-as-input.">We will need to extract just the numeric values for the features and labels as the TensorFlow model will expect just numeric values as input.<a class="anchor-link" href="#We-will-need-to-extract-just-the-numeric-values-for-the-features-and-labels-as-the-TensorFlow-model-will-expect-just-numeric-values-as-input.">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -13752,7 +13707,7 @@ labels array shape : (5000,)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.4:-Train-and-Test-Split">4.4: Train and Test Split<a class="anchor-link" href="#4.4:-Train-and-Test-Split">&#182;</a></h2><p>We will keep some part of the data aside as a <strong>test</strong> set. The model will not use this set during training and it will be used only for checking the performance of the model in trained and un-trained states. This way, we can make sure that we are going in the right direction with our model training.</p>
+<h3 id="Train/Test-splitting">Train/Test splitting<a class="anchor-link" href="#Train/Test-splitting">&#182;</a></h3><p>We will keep some part of the data aside as a <strong>test</strong> set. The model will not use this set during training and it will be used only for checking the performance of the model in trained and un-trained states. This way, we can make sure that we are going in the right direction with our model training.</p>
 
 </div>
 </div>
@@ -13796,15 +13751,7 @@ Test set: (250, 6) (250,)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-5:-Create-the-Model">Task 5: Create the Model<a class="anchor-link" href="#Task-5:-Create-the-Model">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="5.1:-Create-the-Model">5.1: Create the Model<a class="anchor-link" href="#5.1:-Create-the-Model">&#182;</a></h2><p>Let's write a function that returns an untrained model of a certain architecture.</p>
-
+<h3 id="creating-model">creating model<a class="anchor-link" href="#creating-model">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13871,15 +13818,7 @@ _________________________________________________________________
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-6:-Model-Training">Task 6: Model Training<a class="anchor-link" href="#Task-6:-Model-Training">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="6.1:-Model-Training">6.1: Model Training<a class="anchor-link" href="#6.1:-Model-Training">&#182;</a></h2><p>We can use an <code>EarlyStopping</code> callback from Keras to stop the model training if the validation loss stops decreasing for a few epochs.</p>
-
+<h3 id="training-model">training model<a class="anchor-link" href="#training-model">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13960,7 +13899,7 @@ Epoch 16/100
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="6.2:-Plot-Training-and-Validation-Loss">6.2: Plot Training and Validation Loss<a class="anchor-link" href="#6.2:-Plot-Training-and-Validation-Loss">&#182;</a></h2><p>Let's use the <code>plot_loss</code> helper function to take a look training and validation loss.</p>
+<h3 id="plot-training-and-validation-loss">plot training and validation loss<a class="anchor-link" href="#plot-training-and-validation-loss">&#182;</a></h3><p>Using <code>plot_loss</code> helper function to take a look training and validation loss.</p>
 
 </div>
 </div>
@@ -14060,14 +13999,7 @@ Epoch 16/100
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Task-7:-Predictions">Task 7: Predictions<a class="anchor-link" href="#Task-7:-Predictions">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="7.1:-Plot-Raw-Predictions">7.1: Plot Raw Predictions<a class="anchor-link" href="#7.1:-Plot-Raw-Predictions">&#182;</a></h2><p>Let's use the <code>compare_predictions</code> helper function to compare predictions from the model when it was untrained and when it was trained.</p>
+<h3 id="Plotting-Raw-Predictions">Plotting Raw Predictions<a class="anchor-link" href="#Plotting-Raw-Predictions">&#182;</a></h3><p>Using <code>compare_predictions</code> helper function to compare predictions from the model when it was untrained and when it was trained.</p>
 
 </div>
 </div>
@@ -14111,8 +14043,7 @@ Epoch 16/100
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="7.2:-Plot-Price-Predictions">7.2: Plot Price Predictions<a class="anchor-link" href="#7.2:-Plot-Price-Predictions">&#182;</a></h2><p>The plot for price predictions and raw predictions will look the same with just one difference: The x and y axis scale is changed.</p>
-
+<h3 id="plotting-price-predictions.">plotting price predictions.<a class="anchor-link" href="#plotting-price-predictions.">&#182;</a></h3>
 </div>
 </div>
 </div>
