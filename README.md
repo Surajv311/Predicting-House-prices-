@@ -8,4 +8,5 @@ You may install:<br>
 ```conda install matplotlib```<br>
 ```conda install scikit-learn```<br>
 <br>
+
 ![img2](https://github.com/Surajv311/Predicting-House-prices-/blob/master/images/1.jpg)
